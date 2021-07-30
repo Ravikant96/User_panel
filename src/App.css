@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+.user-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+}
+.no-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #efefef;
+  font-size: 22px;
+  height: 400px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 500px;
+  overflow: auto;
+}
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 300px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #efefef;
+}
+.card .icon {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  padding: 5px 12px;
+  border-left: 1px dashed;
+  height: 50%;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+}
+.card .icon span {
+  cursor: pointer;
+  background: rgb(240, 133, 133);
+  padding: 10px;
+  width: 40px;
+  margin: 10px 0;
+}
+.card .icon span.green {
+  background: rgb(165, 235, 165);
+}
+.card .icon span.yellow {
+  background: rgb(240, 240, 167);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card .details {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pagination-bar {
+  display: flex;
+  border-top: 1px solid #000;
+  padding: 20px;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pagination-bar .limit,
+.pagination-bar .pageNo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination-bar .limit span,
+.pagination-bar .pageNo span {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  padding: 5px;
+  margin: 0 2px;
+  transition: background 300ms, color 300ms;
+}
+.pagination-bar .limit span:hover,
+.pagination-bar .pageNo span:hover {
+  background: #efefef;
+  cursor: pointer;
+  color: rgb(49, 163, 230);
+}
+.pagination-bar .limit input,
+.pagination-bar .pageNo input {
+  width: 50px;
+  height: 20px;
+}
+.pagination-bar .info {
+  margin-left: auto;
+  font-size: 11px;
+}
+.pagination-bar .limit {
+  margin-left: auto;
+}
+.header {
+  display: flex;
+  height: 60px;
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  align-items: center;
+  position: relative;
+}
+.search {
+  margin-left: auto;
+}
+.clear {
+  margin-left: auto;
+}
+.filter-container {
+  position: absolute;
+  background: #fff;
+  border: 1px solid;
+  padding: 20px;
+  margin-top: 5px;
+  width: 400px;
+  max-height: 250px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.country-list input {
+  cursor: pointer;
+  margin: 8px;
+}
+.add-new-form form {
+  position: absolute;
+  right: 0;
+  background: #fff;
+  width: 300px;
+  border: 1px solid;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.add-new-form > button {
+  margin: 0 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-new-form form label {
+  display: flex ;
+  width: 100%;
+  margin: 10px;
+}
+.add-new-form form input {
+  margin-left: auto;
 }
